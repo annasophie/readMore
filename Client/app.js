@@ -5,6 +5,10 @@ angular.module('readmore', []).controller('ReadMoreCtrl', function($scope) {
       author: "AUTHOR",
       description: "DESCRIPTION"
     }
-});
+})
 
-// readMore.factory('Books', function($http){});
+.factory('Books', function($http){
+  $http({
+    method: 'GET',
+  })
+});

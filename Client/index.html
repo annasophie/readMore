@@ -6,19 +6,32 @@
     <title>ReadMore!</title>
     <meta name="Anna-Sophie Nagel">
     <meta name="Book Recommendation Engine">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/stylesheet.css"
     <script src = "bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="./app.js"></script>
   </head>
 
   <body ng-app = "readmore">
-
+  <div class="container">
+  <!-- <div class="col-md-8"> -->
+  <h1>ReadMore!</h1>
+  <h3>--Find the next book you'll read--</h3>
 
   <div ng-controller="ReadMoreCtrl">
+  <div class="search col-md-6 col-md-offset-3">
     Hi! {{book.title}}
+    <form>
+    <div class="form-group">
+    <!-- Add label? -->
+    <input type="text" class="form-control" id="searchTopic" ng-model="topic" placeholder = "what do you want to read about?"/>
+    </div>
+    </form>
+    </div>
   </div>
+</div>
 
-
-
+<!-- </div> -->
 
    </body>
 </html>
