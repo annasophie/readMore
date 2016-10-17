@@ -7,7 +7,7 @@ var ip = '127.0.0.1'
 app.use(express.static(__dirname + '/client'));
 
 app.get('/', function(request, response) {
-  response.render('/client/index.html');
+  response.render('/Client/index.html');
 });
 
 app.listen(port, function() {
