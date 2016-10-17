@@ -1,0 +1,18 @@
+{
+  "name": "read-more",
+  "version": "1.0.0",
+  "description": "Book finder engine",
+  "author": "Anna-Sophie Nagel <annasophie.nagel@gmail.com>",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
