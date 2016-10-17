@@ -8,8 +8,3 @@ angular.module('readmore', []).controller('ReadMoreCtrl', function($scope) {
 });
 
 // readMore.factory('Books', function($http){});
-
-// angular.module('ngAppDemo', []).controller('ngAppDemoController', function($scope) {
-//   $scope.a = 1;
-//   $scope.b = 2;
-// });
