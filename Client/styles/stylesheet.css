@@ -1,19 +1,22 @@
 body {
   text-align: center;
-/*  background-color: purple;*/
 }
+
 input {
   display: inline;
   margin: 1em;
-  /*margin*/
 }
+
 button {
   display:inline;
   margin-top: 1em;
 }
 
-.oneBook {
+.jumbotron {
   margin: 2em;
+  margin: 1.5em;
+  padding: 1.5em;
+  height: 50em;
 }
 
 .title {
@@ -21,6 +24,55 @@ button {
 }
 
 .text {
-  /*text-align: left;*/
   display: inline;
+}
+
+#next {
+  width: 10%;
+}
+
+.cover {
+  margin-top: 5em;
+}
+
+/*animation*/
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+@media (min-width: 992px) {
+  body {
+  }
+
+  .cover {
+    margin-top: 10em;
+  }
+
+  #next {
+    margin-top: 5em;
+  }
+
+  .text {
+    margin-top: 5em;
+  }
+
+  .description {
+    margin-bottom: 5em;
+  }
+
+  .jumbotron {
+    height: 35em;
+  }
 }

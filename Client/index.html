@@ -14,7 +14,6 @@
 
   <body ng-app = "readmore">
     <div class="container">
-  <!-- <div class="col-md-8"> -->
       <h1>ReadMore!</h1>
       <h3>--Find the next book you'll read--</h3>
 
@@ -25,7 +24,6 @@
         <div class="search col-md-6 col-md-offset-3">
           <form>
             <div class="form-group">
-    <!-- Add label? -->
               <input type="text" class="form-control" id="searchTopic" ng-model="topic" placeholder = "what do you want to read about?"/>
               <button type="submit" class="btn" ng-click='findBooks()'>Find</button>
             </div>
@@ -53,7 +51,6 @@
                 {{book.searchInfo.textSnippet.toString()}}
               </div>
             </div>
-
           </div>
         </div>
       </div>

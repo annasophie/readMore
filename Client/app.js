@@ -28,17 +28,9 @@ readmore.factory('Books', ['$http',
           method: 'GET',
           url: 'https://www.googleapis.com/books/v1/volumes?q="' + topic + '"'
         }).then(function(info){
-          // console.log(info);
-          // console.log(info.data.items[0].volumeInfo.title);
           return info.data.items;
         })
       }
     }
   }
 ]);
-// readMore.factory('Books', function($http){});
-
-// angular.module('ngAppDemo', []).controller('ngAppDemoController', function($scope) {
-//   $scope.a = 1;
-//   $scope.b = 2;
-// });
