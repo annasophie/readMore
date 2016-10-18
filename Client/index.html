@@ -22,7 +22,7 @@
             Hi!
             {{book.title}}
 
-        <div class="search col-md-6 col-md-offset-3">
+        <div class="search col-md-6 col-md-offset-3" ng-show="!sought">
           <form>
             <div class="form-group">
     <!-- Add label? -->
@@ -31,32 +31,34 @@
             </div>
           </form>
         </div>
-        <div class="results col-md-12">
-          <div class="oneBook col-md-5" ng-repeat="book in bookList">
-            <div class="cover">
-              <img ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Description" />
-            </div>
-            <div class="text">
-              <div class = "title">
-                <h2>{{book.volumeInfo.title}}</h2>
-              </div>
+        <div class = "row">
+          <div class="oneBook jumbotron" ng-model="currentBook" ng-show="sought">
 
-              <div class="subtitle">
-                {{book.volumeInfo.subtitle}}
-              </div>
-
-              <div class="author">
-                {{book.volumeInfo.author}}
-              </div>
-
-              <div class="description">
-                {{book.searchInfo.textSnippet.toString()}}
-              </div>
+            <div class="cover col-md-4">
+              <img ng-src="{{currentBook.volumeInfo.imageLinks.thumbnail}}" alt="Description" />
             </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="text col-md-6">
+              <div class = "title text-center">
+                <h2>{{currentBook.volumeInfo.title}}</h2>
+              </div>
+
+              <div class="subtitle text-center">
+                <h2>{{currentBook.volumeInfo.subtitle}}</h2>
+              </div>
+
+              <div class="author text-center" ng-repeat="author in currentBook.volumeInfo.author">
+                <h2>{{author}}</h2>
+              </div>
+
+              <div class="description text-center">
+                <h5>{{currentBook.searchInfo.textSnippet}}</h5>
+              </div>
+            </div> <!-- end text -->
+            <img id="next" src='/styles/next.png' ng-click="scroll()"/>
+          </div> <!-- end onebook -->
+        </div><!--end row-->
+      </div> <!-- end controller -->
+    </div> <!-- end container -->
   </body>
 </html>

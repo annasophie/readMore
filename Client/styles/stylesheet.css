@@ -12,8 +12,14 @@ button {
   margin-top: 1em;
 }
 
-.oneBook {
+.jumbotron {
   margin: 2em;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  margin: 1.5em;
+  padding: 1.5em;
+  height: 30em;
+  background: #eee;
 }
 
 .title {
@@ -24,3 +30,17 @@ button {
   /*text-align: left;*/
   display: inline;
 }
+
+#next {
+  width: 10%;
+}
+
+/*@media (min-width: 990px) {
+  .oneBook {
+    width: 75%;
+    padding-left: 25em;
+  }
+  .text {
+    width: 50%;
+  }
+}*/
