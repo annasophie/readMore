@@ -28,6 +28,28 @@
     <!-- Add label? -->
               <input type="text" class="form-control" id="searchTopic" ng-model="topic" placeholder = "what do you want to read about?"/>
               <button type="submit" class="btn" ng-click='findBooks()'>Find</button>
+              <div class="oneBook" ng-repeat="book in bookList">
+                <div class="text pull-left">
+                  <div class = "title">
+                    {{book.volumeInfo.title}}
+                  </div>
+
+                  <div class="subtitle">
+                    {{book.volumeInfo.subtitle}}
+                  </div>
+
+                  <div class="author">
+                    {{book.volumeInfo.author}}
+                  </div>
+
+                  <div class="description">
+                    {{book.volumeInfo.description}}
+                  </div>
+                </div>
+                <div class="cover pull-right">
+                  <img ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Description" />
+                </div>
+              </div>
 
             </div>
           </form>

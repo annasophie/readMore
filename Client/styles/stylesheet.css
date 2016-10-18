@@ -1,3 +1,26 @@
 body {
-  text-align: center
+  text-align: center;
+/*  background-color: purple;*/
+}
+input {
+  display: inline;
+  margin: 1em;
+  /*margin*/
+}
+button {
+  display:inline;
+  margin-top: 1em;
+}
+
+.oneBook {
+  margin: 2em;
+}
+
+.title {
+  color: blue;
+}
+
+.text {
+  text-align: left;
+  display: inline;
 }

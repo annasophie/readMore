@@ -7,8 +7,15 @@ readmore.controller('ReadMoreCtrl', ['$scope', 'Books', function($scope, Books) 
       author: "AUTHOR",
       description: "DESCRIPTION"
     };
+    $scope.bookList = [];
+
     $scope.findBooks = function(){
       Books.findBooks($scope.topic)
+      .then(function(books) {
+        console.log("finding book: " + books);
+        $scope.topic = '';
+        $scope.bookList = books;
+      })
     }
 }]);
 
@@ -20,8 +27,10 @@ readmore.factory('Books', ['$http',
         return $http({
           method: 'GET',
           url: 'https://www.googleapis.com/books/v1/volumes?q="' + topic + '"'
-        }).then(function(data){
-          console.log(data);
+        }).then(function(info){
+          // console.log(info);
+          // console.log(info.data.items[0].volumeInfo.title);
+          return info.data.items;
         })
       }
     }
