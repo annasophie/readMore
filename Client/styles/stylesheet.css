@@ -14,12 +14,12 @@ button {
 
 .jumbotron {
   margin: 2em;
-  border: 1px solid #ccc;
-  border-radius: 11px;
+/*  border: 1px solid #ccc;
+  border-radius: 11px;*/
   margin: 1.5em;
   padding: 1.5em;
-  height: 30em;
-  background: #eee;
+  height: 50em;
+  /*background: #efe;*/
 }
 
 .title {
@@ -33,6 +33,55 @@ button {
 
 #next {
   width: 10%;
+}
+
+.cover {
+  margin-top: 5em;
+}
+
+/*animation*/
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+@media (min-width: 992px) {
+  /*float: none;*/
+  body {
+    /*background: purple;*/
+  }
+
+  .cover {
+    margin-top: 10em;
+  }
+
+  #next {
+    margin-top: 5em;
+    /*position: absolute;*/
+    /*top: 65%;*/
+    /*left: 80%;*/
+    /*float: right;*/
+  }
+  .text {
+    margin-top: 5em;
+  }
+  .description {
+    margin-bottom: 5em;
+  }
+  .jumbotron {
+    height: 35em;
+  }
 }
 
 /*@media (min-width: 990px) {

@@ -6,56 +6,65 @@
     <title>ReadMore!</title>
     <meta name="Anna-Sophie Nagel">
     <meta name="Book Recommendation Engine">
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="/styles/stylesheet.css" />
     <script src = "bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="./app.js"></script>
+    <script src = "bower_components/angular-animate/angular-animate.js"></script>
+    <script type = "text/javascript" src="./app.js"></script>
   </head>
 
   <body ng-app = "readmore">
     <div class="container">
   <!-- <div class="col-md-8"> -->
       <h1>ReadMore!</h1>
-      <h3>--Find the next book you'll read--</h3>
+      <h3>--Find your next book--</h3>
 
       <div ng-controller="ReadMoreCtrl">
-            Hi!
-            {{book.title}}
+<!--             Hi!
+            {{book.title}} -->
 
-        <div class="search col-md-6 col-md-offset-3" ng-show="!sought">
-          <form>
+        <div class="search col-md-6 col-md-offset-3 animate-show" ng-show="!sought">
+          <form name='searchbox'>
             <div class="form-group">
     <!-- Add label? -->
               <input type="text" class="form-control" id="searchTopic" ng-model="topic" placeholder = "what do you want to read about?"/>
-              <button type="submit" class="btn" ng-click='findBooks()'>Find</button>
+              <button type="submit" class="btn" ng-click='findBooks()' ng-disabled="searchbox.$pristine">Find</button>
             </div>
           </form>
         </div>
-        <div class = "row">
-          <div class="oneBook jumbotron" ng-model="currentBook" ng-show="sought">
 
-            <div class="cover col-md-4">
+
+        <div class = "row">
+          <div class="oneBook jumbotron animate-show" ng-model="currentBook" ng-show="sought">
+
+          <div class="row">
+            <div class="cover col-md-4 col-lg-4">
               <img ng-src="{{currentBook.volumeInfo.imageLinks.thumbnail}}" alt="Description" />
             </div>
 
-            <div class="text col-md-6">
+            <div class="text col-md-6 col-lg-6">
               <div class = "title text-center">
-                <h2>{{currentBook.volumeInfo.title}}</h2>
+                <h2><a target="_blank" href={{currentBook.volumeInfo.previewLink}}>{{currentBook.volumeInfo.title}}</a></h2>
               </div>
 
               <div class="subtitle text-center">
                 <h2>{{currentBook.volumeInfo.subtitle}}</h2>
               </div>
 
-              <div class="author text-center" ng-repeat="author in currentBook.volumeInfo.author">
-                <h2>{{author}}</h2>
+              <div class="author text-center" ng-repeat='author in currentBook.authors'>
+                <h4>{{author}}</h4>
               </div>
 
               <div class="description text-center">
-                <h5>{{currentBook.searchInfo.textSnippet}}</h5>
+                <!-- <h5>{{currentBook.searchInfo.textSnippet}}</h5> -->
+                <h5>{{currentBook.volumeInfo.description}}</h5>
               </div>
+              <img id="next" src='/styles/next.png' ng-click="scroll()"/>
             </div> <!-- end text -->
-            <img id="next" src='/styles/next.png' ng-click="scroll()"/>
+            </div> <!-- end row -->
+
           </div> <!-- end onebook -->
         </div><!--end row-->
       </div> <!-- end controller -->
