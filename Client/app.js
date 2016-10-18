@@ -8,7 +8,7 @@ readmore.controller('ReadMoreCtrl', ['$scope', 'Books', function($scope, Books) 
       description: "DESCRIPTION"
     };
     $scope.findBooks = function(){
-      Books.findBooks("HI there")
+      Books.findBooks($scope.topic)
     }
 }]);
 
@@ -17,6 +17,12 @@ readmore.factory('Books', ['$http',
     return {
       findBooks: function(topic){
         console.log(topic);
+        return $http({
+          method: 'GET',
+          url: 'https://www.googleapis.com/books/v1/volumes?q="' + topic + '"'
+        }).then(function(data){
+          console.log(data);
+        })
       }
     }
   }
