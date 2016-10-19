@@ -1,52 +1,12 @@
-# read-more
-<!--
-> This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
+## ReadMore! ##
+  Simplifying reading
+  An app to help you find something to read on new and interesting subjects
 
-There is an approach called "working backwards" that is widely used at Amazon. They work backwards from the customer, rather than starting with an idea for a product and trying to bolt customers onto it. While working backwards can be applied to any specific product decision, using this approach is especially important when developing new products or features.
+## Purpose ##
+  We use Google Books' API to make suggestions based on the interests you give us, ten results at a time. You can also click on the book's title to bring you to its page on Google Books, with your interests highlighted. From there
 
-For new initiatives a product manager typically starts by writing an internal press release announcing the finished product. The target audience for the press release is the new/updated product's customers, which can be retail customers or internal users of a tool or technology. Internal press releases are centered around the customer problem, how current solutions (internal or external) fail, and how the new product will blow away existing solutions.
+## Your Problem ##
+  For when you want to read something new, but are either out of ideas or overwhelmed by choices.
 
-If the benefits listed don't sound very interesting or exciting to customers, then perhaps they're not (and shouldn't be built). Instead, the product manager should keep iterating on the press release until they've come up with benefits that actually sound like benefits. Iterating on a press release is a lot less expensive than iterating on the product itself (and quicker!).
-
-If the press release is more than a page and a half, it is probably too long. Keep it simple. 3-4 sentences for most paragraphs. Cut out the fat. Don't make it into a spec. You can accompany the press release with a FAQ that answers all of the other business or execution questions so the press release can stay focused on what the customer gets. My rule of thumb is that if the press release is hard to write, then the product is probably going to suck. Keep working at it until the outline for each paragraph flows.
-
-Oh, and I also like to write press-releases in what I call "Oprah-speak" for mainstream consumer products. Imagine you're sitting on Oprah's couch and have just explained the product to her, and then you listen as she explains it to her audience. That's "Oprah-speak", not "Geek-speak".
-
-Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
- -->
-
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
-  ReadMore!
-
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-  For when you want to read something but don't know what
-
-## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-  An engine that will give book suggestions based on keywords
-
-## Problem ##
-  > Describe the problem your product solves.
-  For when you want to read but don't know what.
-
-## Solution ##
-  > Describe how your product elegantly solves the problem.
-  Put in a topic and our engine will build recommendations!
-
-## Quote from You ##
-  > A quote from a spokesperson in your company.
-  Books are such a vital part of our culture - they build empathy, impart knowledge and spur information. Takes some of the pain out of searching for a new book
-
-## How to Get Started ##
-  > Describe how easy it is to get started.
-  Just go to our site and type in a topic!
-
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-  Awesome! I read 300% more now.
-
-## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
-
+## Our Solution ##
+  Just tell us what you're interested in, and we'll use the Google Books API to go and find you ten books on the subject with title, author, cover image, and descriptions when available. If you like the looks of any of them, just click the title and you'll be taken to the Google Books page. You'll find your interests highlighted there, and links to buy or download the book.
